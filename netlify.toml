@@ -1,0 +1,16 @@
+# Static site: plain HTML/CSS/JS with no framework, dependencies, or build step.
+[build]
+  publish = "."
+  command = "echo 'No build step required: static site'"
+
+# The entry page is named "Index.html" (capital I). Netlify paths are
+# case-sensitive, so serve it for the site root and for the lowercase name.
+[[redirects]]
+  from = "/"
+  to = "/Index.html"
+  status = 200
+
+[[redirects]]
+  from = "/index.html"
+  to = "/Index.html"
+  status = 200
