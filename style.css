@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    -webkit-user-drag: none;
+    user-select: none;
+    background: black;
+}
+
+h1 {
+    color: rgb(142, 229, 255);
+    text-align: center;
+    font-family: Poppins, sans-serif;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 10vw;
+    
+}
+
+.field-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.field {
+    width: 60vw;
+    height: 30vw;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    gap: 1px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+.cell {
+    background: rgb(67, 67, 67);
+}
+
+.cell:hover {
+    background: rgb(255, 255, 46);
+    opacity: .5;
+}
+
+.color-pallatte {
+    display: grid;
+    height: 30vw;
+    width: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.color-cell,
+.tool-cell {
+    background: rgb(67, 67, 67);
+    aspect-ratio: 1/1;
+    width: 100%;
+    transition: all .2s linear;
+}
+
+.color-cell:hover {
+    transform: scale(1.1);
+    transition: all .2s linear;
+}
+
+.color-cell.red {
+    background: rgb(255, 102, 46);
+}
+
+.color-cell.green {
+    background: rgb(102, 218, 84);
+}
+
+.color-cell.blue {
+    background: rgb(83, 155, 255);
+}
+
+.color-cell.yellow {
+    background: rgb(255, 236, 26);
+}
+
+.color-cell.skyblue {
+    background: rgb(142, 229, 255);
+}
+
+.tool-cell {
+   background: transparent;
+   border:1px solid white;
+   box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool-cell img {
+    width: 80%;
+}
+
+.fill-tool {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fill-tool img {
+    width: 80%;
+}
+
+.selected {
+    border: 2px solid black;
+    outline: 2px solid white;
+    box-sizing: border-box;
+}
+
+.selected:hover {
+    transform: scale(1);
+}
